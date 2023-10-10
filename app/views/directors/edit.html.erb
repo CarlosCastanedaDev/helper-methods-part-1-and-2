@@ -1,0 +1,21 @@
+<h1>Edit director details</h1>
+
+<%= form_with(model: @director, method: :patch, data: { turbo: false }) do |form| %>
+<div>
+  <%= form.label :name %>
+  <%= form.text_field :name %>
+</div>
+
+<div>
+  <%= form.label :bio %>
+  <%= form.text_area :bio, { rows: 3 } %>
+</div>
+
+<div>
+  <%= form.label :dob %>
+  <%= form.date_field :dob %>
+</div>
+
+<%= form.button%>
+
+<% end %>

@@ -1,0 +1,15 @@
+<h1>List of all directors</h1>
+
+<hr>
+
+<%= link_to "Add new director", new_director_path %>
+
+<% @directors.each do |director| %>
+<div>
+  <h3><%= director.name %></h3>
+  <p><%= director.bio %></p>
+  <p><%= director.dob %></p>
+ <%= link_to "Show details", director %>
+</div>
+
+<% end %>
